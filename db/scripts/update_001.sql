@@ -28,3 +28,24 @@ create table model_car (
     id serial primary key,
     name varchar(2000)
 );
+
+create table if not exists persons (
+    id serial primary key,
+    name varchar(2000)
+);
+
+create table if not exists addresses (
+    id serial primary key,
+    street varchar(2000),
+	number varchar(2000)
+);
+
+create table if not exists author (
+    id serial primary key,
+    name varchar(2000)
+);
+
+create table if not exists book (
+    id serial primary key,
+    name varchar(2000)
+);
