@@ -20,5 +20,9 @@
 
         <mapping class="ru.job4j.manytoone.User" />
         <mapping class="ru.job4j.manytoone.Role" />
+        <mapping class="ru.job4j.onetomany.UserOne" />
+        <mapping class="ru.job4j.onetomany.RoleOne" />
+        <mapping class="ru.job4j.onetomany.CarModel" />
+        <mapping class="ru.job4j.onetomany.CarMark" />
     </session-factory>
 </hibernate-configuration>
