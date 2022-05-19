@@ -16,38 +16,27 @@ public class HbmRun {
         ) {
             session.beginTransaction();
 
-            /**
             Book first = Book.of("book1");
             Book second = Book.of("book2");
             Book third = Book.of("book3");
 
             Author author1 = Author.of("Author1");
             author1.getBooks().add(first);
+            session.persist(author1);
 
             Author author2 = Author.of("Author2");
-            author2.getBooks().add(first);
             author2.getBooks().add(second);
+            session.persist(author2);
+
+            author2.getBooks().add(third);
+            session.persist(author2);
 
             Author author3 = Author.of("Author3");
             author3.getBooks().add(third);
-
-            session.persist(author1);
-            session.persist(author2);
             session.persist(author3);
-             **/
 
-            Address one = Address.of("Kazanskaya", "1");
-            Address two = Address.of("Piterskaya", "10");
-
-            Person first = Person.of("Nikolay");
-            first.getAddresses().add(one);
-            first.getAddresses().add(two);
-
-            Person second = Person.of("Anatoliy");
-            second.getAddresses().add(two);
-
-            session.persist(first);
-            session.persist(second);
+            Author author = session.get(Author.class, 1);
+            session.remove(author);
 
             session.getTransaction().commit();
             session.close();
