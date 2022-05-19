@@ -49,3 +49,14 @@ create table if not exists book (
     id serial primary key,
     name varchar(2000)
 );
+
+create table if not exists categories (
+    id serial primary key,
+    name varchar(500)
+);
+
+create table if not exists tasks (
+    id serial primary key,
+    description varchar(500),
+    category_id int not null references categories(id)
+);
