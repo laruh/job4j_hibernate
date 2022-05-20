@@ -30,5 +30,6 @@
         <mapping class="ru.job4j.manytomany.Book" />
         <mapping class="ru.job4j.lazy.Category" />
         <mapping class="ru.job4j.lazy.Task" />
+        <mapping class="ru.job4j.date.Product" />
     </session-factory>
 </hibernate-configuration>

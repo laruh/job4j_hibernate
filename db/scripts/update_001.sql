@@ -60,3 +60,10 @@ create table if not exists tasks (
     description varchar(500),
     category_id int not null references categories(id)
 );
+
+create table if not exists products (
+    id serial primary key,
+    name varchar(500),
+    producer varchar(500),
+    created TIMESTAMP
+);
